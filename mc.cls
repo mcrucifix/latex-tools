@@ -201,159 +201,66 @@
 \makeatother
 
 
-%%%%%%%%%%%%%%%
-% DEFINE COLOR BOXES
-%%%%%%%%%%%%%%%
+% ==========================================================
+% Harmonised Box System
+% ==========================================================
 
-\newtcolorbox{studentinvestigation}[1]{
+% Define a base style for all custom boxes
+\tcbset{
+  myboxstyle/.style={
     enhanced,
-    colback=white,
-    colframe=blue!75!black,
-    colbacktitle=blue!75!black,
+    boxrule=1.2pt,
+    arc=6pt,
+    top=8pt,
+    bottom=8pt,
+    left=10pt,
+    right=10pt,
+    attach boxed title to top left={yshift=-3mm, xshift=5mm},
+    drop shadow
+  },
+  myboxtitle/.style={
+    enhanced,
+    boxrule=0pt,
+    rounded corners=southeast,
+    top=3pt,
+    bottom=3pt,
+    left=6pt,
+    right=6pt
+  }
+}
+
+% ==========================================================
+% Macro to Define New Box Types
+% Usage:
+% \newcoursebox{name}{icon}{title prefix}{title color}{box color}
+% ==========================================================
+
+\newcommand{\newcoursebox}[6][]{%
+  % #1 = optional extra tcolorbox options
+  % #2 = environment name
+  % #3 = icon
+  % #4 = title text prefix (e.g. "(recall):")
+  % #5 = title background color
+  % #6 = frame / background color
+  \newtcolorbox[#1]{#2}[1]{myboxstyle,
+    colback=#6!10!white,
+    colframe=#6!75!black,
+    colbacktitle=#5,
     coltitle=white,
     fonttitle=\bfseries,
-    title={\faGraduationCap\ #1},
-    boxrule=1.2pt,
-    arc=6pt,
-    top=8pt,
-    bottom=8pt,
-    left=10pt,
-    right=10pt,
-    attach boxed title to top left={yshift=-3mm, xshift=5mm},
-    boxed title style={
-        enhanced,
-        boxrule=0pt,
-        colframe=blue!75!black,
-        colback=blue!75!black,
-        interior style={fill=blue!75!black},
-        rounded corners=southeast,
-        top=3pt,
-        bottom=3pt,
-        left=6pt,
-        right=6pt,
-    },
-    drop shadow
+    title={#3\ #4\ ##1},
+    boxed title style={myboxtitle, colframe=#5, colback=#5}
+  }
 }
 
-\newtcolorbox{synthesis}[1]{
-    enhanced,
-    colback=white,
-    colframe=blue!75!black,
-    colbacktitle=blue!75!black,
-    coltitle=white,
-    fonttitle=\bfseries,
-    title={\faBinoculars\ Synthesis: #1},
-    boxrule=1.2pt,
-    arc=6pt,
-    top=8pt,
-    bottom=8pt,
-    left=10pt,
-    right=10pt,
-    attach boxed title to top left={yshift=-3mm, xshift=5mm},
-    boxed title style={
-        enhanced,
-        boxrule=0pt,
-        colframe=red!75!black,
-        colback=red!75!white,
-        interior style={fill=blue!75!black},
-        rounded corners=southeast,
-        top=3pt,
-        bottom=3pt,
-        left=6pt,
-        right=6pt,
-    },
-    drop shadow
-}
+% ==========================================================
+% Define Specific Course Box Types
+% ==========================================================
 
-\newtcolorbox{furtherreading}[0]{
-    enhanced,
-    colback=blue!10!white,        % light gray background
-    colframe=blue!80!black,       % dark blue frame
-    colbacktitle=blue!80!black,   % dark blue title background
-    coltitle=white,               % white title text
-    fonttitle=\bfseries,
-    title={\faBook\ Further Reading}, % safer icon
-    boxrule=1.2pt,
-    arc=6pt,
-    top=8pt,
-    bottom=8pt,
-    left=10pt,
-    right=10pt,
-    attach boxed title to top left={yshift=-3mm, xshift=5mm},
-    boxed title style={
-        enhanced,
-        boxrule=0pt,
-        colframe=blue!60!black,
-        colback=blue!60!black,
-        rounded corners=southeast,
-        top=3pt,
-        bottom=3pt,
-        left=6pt,
-        right=6pt,
-    },
-    drop shadow
-}
-
-\newtcolorbox{key}[1]{
-    enhanced,
-    colback=white!90!black,
-    colframe=blue!75!black,
-    colbacktitle=blue!75!black,
-    coltitle=white,
-    fonttitle=\bfseries,
-    title={\faKey\ Key outcome: #1},
-    boxrule=1.2pt,
-    arc=6pt,
-    top=8pt,
-    bottom=8pt,
-    left=10pt,
-    right=10pt,
-    attach boxed title to top left={yshift=-3mm, xshift=5mm},
-    boxed title style={
-        enhanced,
-        boxrule=0pt,
-        colframe=orange!75!white, 
-        colback=orange!75!white,
-        interior style={fill=yellow!75!black},
-        rounded corners=southeast,
-        top=3pt,
-        bottom=3pt,
-        left=6pt,
-        right=6pt,
-    },
-    drop shadow
-}
-
-\newtcolorbox{basicnotion}[1]{
-    enhanced,
-    colback=white,
-    colframe=green!75!black,
-    colbacktitle=green!35!white,
-    coltitle=white,
-    fonttitle=\bfseries,
-    title={\faHistory\ (recall): #1},
-    boxrule=1.2pt,
-    arc=6pt,
-    top=8pt,
-    bottom=8pt,
-    left=10pt,
-    right=10pt,
-    attach boxed title to top left={yshift=-3mm, xshift=5mm},
-    boxed title style={
-        enhanced,
-        boxrule=0pt,
-        colframe=green!20!black,
-        colback=green!20!black,
-        interior style={fill=blue!35!white},
-        rounded corners=southwest,
-        rounded corners=southeast,
-        top=3pt,
-        bottom=3pt,
-        left=6pt,
-        right=6pt,
-    },
-    drop shadow
-}
-
+\newcoursebox{studentinvestigation}{\faGraduationCap}{}{blue!75!black}{blue!75!black}
+\newcoursebox{synthesis}{\faBinoculars}{Synthesis:}{red!75!black}{blue!75!black}
+\newcoursebox{furtherreading}{\faBook}{Further Reading}{blue!80!black}{blue!60!black}
+\newcoursebox{key}{\faKey}{Key Outcome:}{orange!75!white}{blue!75!black}
+\newcoursebox{basicnotion}{\faHistory}{(recall):}{green!35!white}{green!75!black}
 
 
