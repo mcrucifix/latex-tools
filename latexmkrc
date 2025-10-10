@@ -11,8 +11,15 @@ while (my $line = <$fh>) {
 }
 close($fh) or die "Could not close $config_file: $!";
 
-@default_files = ('lphys2264.tex');
-$root_filename = 'lphys2264.tex';
+my $mainfile = $config{'PROJECT_NAME'} // die "PROJECT_NAME not defined in $config_file\n";
+$mainfile .= '.tex' unless $mainfile =~ /\.tex$/;
+
+# Debug message
+print ">> Using main file: $mainfile\n";
+
+@default_files = ($mainfile);
+$root_filename = $mainfile;
+
 $biber = 'python3 makebib.py && biber %O %S';
 # Use LuaLaTeX instead of pdfLaTeX
 $pdflatex = 'lualatex --synctex=1 %O %S';
