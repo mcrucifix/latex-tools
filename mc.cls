@@ -137,6 +137,7 @@
 \newcommand{\cindex}[1]{#1\index{#1}}
 \newcommand{\rf}[1]{{{#1}_{r}}}
 \newcommand{\ez}{\ensuremath{\vec{e}_z}}
+\newcommand{\ey}{\ensuremath{\vec{e}_y}}
 \newcommand{\ex}{\ensuremath{\vec{e}_x}}
 \newcommand{\advec}{\vec{u}\cdot\nabla}
 \newcommand{\advech}{\vec{u}_h\cdot\nabla_h}
@@ -242,13 +243,13 @@
   % #4 = title text prefix (e.g. "(recall):")
   % #5 = title background color
   % #6 = frame / background color
-  \newtcolorbox[#1]{#2}[1]{myboxstyle,
+  \newtcolorbox[#1]{#2}[1]{myboxstyle, breakable, enhanced, 
     colback=#6!10!white,
     colframe=#6!75!black,
     colbacktitle=#5,
     coltitle=white,
     fonttitle=\bfseries,
-    title={#3\ #4\ ##1},
+    title={#3 \parbox{0.85\textwidth}{#4\ ##1}},
     boxed title style={myboxtitle, colframe=#5, colback=#5}
   }
 }
