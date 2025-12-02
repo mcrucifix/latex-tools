@@ -137,6 +137,7 @@
 \newcommand{\cindex}[1]{#1\index{#1}}
 \newcommand{\rf}[1]{{{#1}_{r}}}
 \newcommand{\ez}{\ensuremath{\vec{e}_z}}
+\newcommand{\ey}{\ensuremath{\vec{e}_y}}
 \newcommand{\ex}{\ensuremath{\vec{e}_x}}
 \newcommand{\advec}{\vec{u}\cdot\nabla}
 \newcommand{\advech}{\vec{u}_h\cdot\nabla_h}
@@ -248,7 +249,7 @@
     colbacktitle=#5,
     coltitle=white,
     fonttitle=\bfseries,
-    title={#3\ #4\ ##1},
+    title={\parbox{0.9\textwidth}{#3\ #4\ ##1}},
     boxed title style={myboxtitle, colframe=#5, colback=#5}
   }
 }
@@ -262,5 +263,6 @@
 \newcoursebox{furtherreading}{\faBook}{Further Reading}{blue!80!black}{blue!60!black}
 \newcoursebox{key}{\faKey}{Key Outcome:}{orange!75!white}{blue!75!black}
 \newcoursebox{basicnotion}{\faHistory}{(recall):}{green!35!white}{green!75!black}
+\newcoursebox{application}{\faHistory}{Application:}{blue!35!white}{blue!75!black}
 
 
