@@ -32,6 +32,7 @@
  
 \geometry{paper=a4paper,portrait}
 
+\RequirePackage[colorinlistoftodos, textwidth=3cm, shadow]{todonotes}
 
 \definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
 \hypersetup{colorlinks = true,anchorcolor=blue,linkcolor=auburn}
@@ -263,5 +264,6 @@
 \newcoursebox{furtherreading}{\faBook}{Further Reading}{blue!80!black}{blue!60!black}
 \newcoursebox{key}{\faKey}{Key Outcome:}{orange!75!white}{blue!75!black}
 \newcoursebox{basicnotion}{\faHistory}{(recall):}{green!35!white}{green!75!black}
+\newcoursebox{application}{\faHistory}{(recall):}{green!35!white}{green!75!black}
 
 
