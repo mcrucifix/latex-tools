@@ -250,7 +250,7 @@
     colbacktitle=#5,
     coltitle=white,
     fonttitle=\bfseries,
-    title={#3 \parbox{0.85\textwidth}{#4\ ##1}},
+    title={\parbox{0.9\textwidth}{#3\ #4\ ##1}},
     boxed title style={myboxtitle, colframe=#5, colback=#5}
   }
 }
