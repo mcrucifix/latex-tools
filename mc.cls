@@ -244,7 +244,7 @@
   % #4 = title text prefix (e.g. "(recall):")
   % #5 = title background color
   % #6 = frame / background color
-  \newtcolorbox[#1]{#2}[1]{myboxstyle, breakable, enhanced, 
+  \newtcolorbox[#1]{#2}[1]{myboxstyle, enhanced, 
     colback=#6!10!white,
     colframe=#6!75!black,
     colbacktitle=#5,
