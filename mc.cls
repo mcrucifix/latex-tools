@@ -10,9 +10,9 @@
 \DeclareMathSymbol{;}{\mathpunct}{operators}{"3B}
 \tikzstyle{axis}=[>=latex,thick]
 
-\RequirePackage{xcolor}
+\RequirePackage[dvipsnames]{xcolor}
 \RequirePackage{geometry}
-\RequirePackage{fontawesome} % For icons
+\RequirePackage{fontawesome5} % For icons
 \RequirePackage{hyperref}
 \RequirePackage{linebreaker}
 \RequirePackage{mathtools}
@@ -32,7 +32,7 @@
  
 \geometry{paper=a4paper,portrait}
 
-\RequirePackage[colorinlistoftodos, textwidth=3cm, shadow]{todonotes}
+\RequirePackage[colorinlistoftodos]{todonotes}
 
 \definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
 \hypersetup{colorlinks = true,anchorcolor=blue,linkcolor=auburn}
