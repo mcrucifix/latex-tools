@@ -264,6 +264,6 @@
 \newcoursebox{furtherreading}{\faBook}{Further Reading}{blue!80!black}{blue!60!black}
 \newcoursebox{key}{\faKey}{Key Outcome:}{orange!75!white}{blue!75!black}
 \newcoursebox{basicnotion}{\faHistory}{(recall):}{green!35!white}{green!75!black}
-\newcoursebox{application}{\faHistory}{(recall):}{green!35!white}{green!75!black}
+\newcoursebox{application}{\faEdit}{Application:}{teal!70!black}{teal!5!white}
 
 
