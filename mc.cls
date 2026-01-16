@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mc}[2014/08/16 Example LaTeX class]
+\ProvidesClass{tools/mc}[2014/08/16 Example LaTeX class]
 \newcommand{\headlinecolor}{\normalcolor}
 \LoadClass{book}
 
