@@ -14,7 +14,7 @@
 \RequirePackage{fontawesome5} % For icons
 \RequirePackage{hyperref}
 % \RequirePackage[dvipsnames]{xcolor}
-% \RequirePackage{geometry}
+\RequirePackage{geometry}
 % \RequirePackage{linebreaker}
  
 \RequirePackage{calc}
@@ -30,7 +30,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
  
-% \geometry{paper=a4paper,portrait}
+\geometry{paper=a4paper,portrait}
 
 \RequirePackage[colorinlistoftodos]{todonotes}
 
