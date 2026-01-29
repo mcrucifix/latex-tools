@@ -10,12 +10,12 @@
 \DeclareMathSymbol{;}{\mathpunct}{operators}{"3B}
 \tikzstyle{axis}=[>=latex,thick]
 
-\RequirePackage[dvipsnames]{xcolor}
-\RequirePackage{geometry}
+\RequirePackage{mathtools}
 \RequirePackage{fontawesome5} % For icons
 \RequirePackage{hyperref}
-\RequirePackage{linebreaker}
-\RequirePackage{mathtools}
+% \RequirePackage[dvipsnames]{xcolor}
+% \RequirePackage{geometry}
+% \RequirePackage{linebreaker}
  
 \RequirePackage{calc}
 \RequirePackage{ifthen}
@@ -30,7 +30,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
  
-\geometry{paper=a4paper,portrait}
+% \geometry{paper=a4paper,portrait}
 
 \RequirePackage[colorinlistoftodos]{todonotes}
 
