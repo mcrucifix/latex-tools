@@ -146,7 +146,7 @@
 \newcommand{\pdx}[1]{\pd{#1}{x}}
 \newcommand{\pdy}[1]{\pd{#1}{y}}
 \newcommand{\pdz}[1]{\pd{#1}{z}}
-\newcommand\odd[2]{\frac{\mathop\mathrm{d} {#1}}{{\mathop\mathrm{d}{#2}}}}
+\newcommand\odd[2]{\frac{\mathrm{d} {#1}}{{\mathrm{d}{#2}}}}
 \newcommand\pdd[2]{\frac{\partial {#1}}{\partial {#2}}}
 \def\vpot{\varphi}
 \def\grad{\bm{\nabla}}

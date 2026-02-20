@@ -13,7 +13,7 @@ close($fh) or die "Could not close $config_file: $!";
 
 @default_files = ('lphys2264.tex');
 $root_filename = 'lphys2264.tex';
-$biber = 'python3 makebib.py && biber %O %S';
+$biber = 'biber %O %S';
 # Use LuaLaTeX instead of pdfLaTeX
 $pdflatex = 'lualatex --synctex=1 %O %S';
 $pdf_mode = 1;    # produce PDF
