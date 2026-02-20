@@ -1,5 +1,5 @@
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{mc}[2014/08/16 Example LaTeX class]
+\ProvidesClass{tools/mc}[2014/08/16 Example LaTeX class]
 \newcommand{\headlinecolor}{\normalcolor}
 \LoadClass{book}
 
@@ -10,12 +10,12 @@
 \DeclareMathSymbol{;}{\mathpunct}{operators}{"3B}
 \tikzstyle{axis}=[>=latex,thick]
 
-\RequirePackage{xcolor}
-\RequirePackage{geometry}
-\RequirePackage{fontawesome} % For icons
-\RequirePackage{hyperref}
-\RequirePackage{linebreaker}
 \RequirePackage{mathtools}
+\RequirePackage{fontawesome5} % For icons
+\RequirePackage{hyperref}
+% \RequirePackage[dvipsnames]{xcolor}
+\RequirePackage{geometry}
+% \RequirePackage{linebreaker}
  
 \RequirePackage{calc}
 \RequirePackage{ifthen}
@@ -32,6 +32,7 @@
  
 \geometry{paper=a4paper,portrait}
 
+\RequirePackage[colorinlistoftodos]{todonotes}
 
 \definecolor{auburn}{rgb}{0.43, 0.21, 0.1}
 \hypersetup{colorlinks = true,anchorcolor=blue,linkcolor=auburn}
@@ -137,6 +138,7 @@
 \newcommand{\cindex}[1]{#1\index{#1}}
 \newcommand{\rf}[1]{{{#1}_{r}}}
 \newcommand{\ez}{\ensuremath{\vec{e}_z}}
+\newcommand{\ey}{\ensuremath{\vec{e}_y}}
 \newcommand{\ex}{\ensuremath{\vec{e}_x}}
 \newcommand{\advec}{\vec{u}\cdot\nabla}
 \newcommand{\advech}{\vec{u}_h\cdot\nabla_h}
@@ -242,13 +244,13 @@
   % #4 = title text prefix (e.g. "(recall):")
   % #5 = title background color
   % #6 = frame / background color
-  \newtcolorbox[#1]{#2}[1]{myboxstyle,
+  \newtcolorbox[#1]{#2}[1]{myboxstyle, enhanced, 
     colback=#6!10!white,
     colframe=#6!75!black,
     colbacktitle=#5,
     coltitle=white,
     fonttitle=\bfseries,
-    title={#3\ #4\ ##1},
+    title={\parbox{0.9\textwidth}{#3\ #4\ ##1}},
     boxed title style={myboxtitle, colframe=#5, colback=#5}
   }
 }
@@ -262,5 +264,6 @@
 \newcoursebox{furtherreading}{\faBook}{Further Reading}{blue!80!black}{blue!60!black}
 \newcoursebox{key}{\faKey}{Key Outcome:}{orange!75!white}{blue!75!black}
 \newcoursebox{basicnotion}{\faHistory}{(recall):}{green!35!white}{green!75!black}
+\newcoursebox{application}{\faEdit}{Application:}{teal!70!black}{teal!5!white}
 
 

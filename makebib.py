@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from bibbrowser.config import Config
-import bibbrowser.version 
+# import bibbrowser.version 
 # from doi2bib import crossref
 
 CLIPBOARDCOPYCOMMAND = Config.get('executables','ClipBoardCopyCommand')
@@ -35,7 +35,7 @@ Session = sessionmaker(bind=engine)
 session = Session()
 
 # Path to your .bcf file
-bcf_file = "lphys2264.bcf"
+bcf_file = "lphys1213.bcf"
 output_file = "bibtex.bib"
 
 # Parse the .bcf XML file
